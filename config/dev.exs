@@ -26,12 +26,15 @@ config :ateliware, AteliwareWeb.Endpoint,
   secret_key_base: "YMfCdHu3IFXMUyn1yu5BOG/w3HzS1uRplASuokL1W7cldiYgbMAWO+5hqpaRuVcf",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}, npx: [
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    npx: [
       "tailwindcss",
-      "--input=css/app.css", "--output=../priv/static/assets/app.css", "--postcss",
+      "--input=css/app.css",
+      "--output=../priv/static/assets/app.css",
+      "--postcss",
       "--watch",
       cd: Path.expand("../assets", __DIR__)
-      ]
+    ]
   ]
 
 # ## SSL Support
