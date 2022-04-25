@@ -4,12 +4,16 @@
     <div class="text-center">
         <h2 class="mb-4 text-lg" data-role="name" data-id={@id}><%= @repo.name %></h2>
         <div class="flex items-center justify-between">
-            <p class="text-sm text-gray-500" data-role="watcher" data-id={@id}><strong>Watchers: </strong><%= @repo.watchers_count %></p>
+            <div class="flex-1 justify-end text-yellow-500">
+                <%= render AteliwareWeb.SharedView, "star.html", %{} %>
+            </div>
+            <span class="inline text-black text-sm" data-role="watcher" data-id={@id}><%= @repo.watchers_count %></span>
+        </div>  
+        <div class="flex items-center justify-end">
             <a href="#" data-role="button-action" data-id={@id} phx-click="add-repo" phx-target={@myself} class={@repo.language}>
                 <%= render AteliwareWeb.SharedView, @icon, %{} %>
             </a>
         </div>  
-
         <div class="flex items-center justify-between">
             <p class="text-sm text-green-500" data-role="show-message" data-id={@id}>
                 <%= if @message != nil do %>
