@@ -17,7 +17,9 @@ defmodule AteliwareWeb.Router do
   scope "/", AteliwareWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", PageLive, :index
+    live "/all_repos", RepoLive, :index
+    live "/show_repo/:id", ShowRepoLive, :index
   end
 
   # Other scopes may use custom stacks.
