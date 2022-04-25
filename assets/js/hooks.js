@@ -1,6 +1,6 @@
-import loadReposHook from "./hooks/LoadReposHook"
+import loadRepos from "./hooks/LoadRepos"
 
 let Hooks = {
-    LoadReposHook: loadReposHook
+    LoadRepos: loadRepos
 }
 export default Hooks
