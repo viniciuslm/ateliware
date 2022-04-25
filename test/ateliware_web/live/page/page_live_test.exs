@@ -60,8 +60,8 @@ defmodule AteliwareWeb.PageLiveTest do
              |> Enum.count() == 20
 
       view
-      |> element("#load-repos-hook")
-      |> render_hook("load-repos-hook", %{})
+      |> element("#load-repos")
+      |> render_hook("load-repos", %{})
 
       assert view
              |> element("#all-repos")
