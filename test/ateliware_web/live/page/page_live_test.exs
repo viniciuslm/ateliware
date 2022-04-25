@@ -48,7 +48,7 @@ defmodule AteliwareWeb.PageLiveTest do
     end
   end
 
-  test "test load-repos with hooks", %{conn: conn} do
+  test "test lload-repos-hook with hooks", %{conn: conn} do
     with_mock GetRepos, get_repos: fn _language, _page, _per_page -> items() end do
       {:ok, view, _html} = live(conn, Routes.page_path(conn, :index))
 
@@ -60,8 +60,8 @@ defmodule AteliwareWeb.PageLiveTest do
              |> Enum.count() == 20
 
       view
-      |> element("#load-repos")
-      |> render_hook("load-repos", %{})
+      |> element("#load-repos-hook")
+      |> render_hook("load-repos-hook", %{})
 
       assert view
              |> element("#all-repos")

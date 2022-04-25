@@ -25,7 +25,7 @@ defmodule AteliwareWeb.PageLive do
     {:noreply, socket}
   end
 
-  def handle_event("load-repos", _, socket) do
+  def handle_event("load-repos-hook", _, socket) do
     socket = socket |> update(:page, &(&1 + 1)) |> load_repos
     {:noreply, socket}
   end
