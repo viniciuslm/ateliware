@@ -5,27 +5,32 @@
     <div class="flex space-x-3">
         <img src={@repo.avatar_url} alt="" class="h-50 w-50 rounded-full">
         <div class="flex-1 space-y-1">
-            <div class="pt-10 flex items-center justify-between">
+            <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium">
-                    <strong>Language: </strong>
-                    <span class={@repo.language}><%= @repo.language %></span>
+                    <strong>Repositório: </strong>
+                    <a href={@repo.url}><%= @repo.name %></a>
                 </h3>
             </div>
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium">
-                    <strong>Repo: </strong>
-                    <a href={@repo.url}><%= @repo.name %></a>
+                 <%= render AteliwareWeb.SharedView, "star.html", %{} %>
+                 <%= @repo.watchers_count %>
                 </h3>
+            </div>
+            <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium">
                     <strong>Forks:</strong> <%= @repo.forks %>
                 </h3>
             </div>
             <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium">
-                    <strong>Open Issues: </strong><%= @repo.open_issues %>
+                    <strong>Linguagem: </strong>
+                    <span class={@repo.language}><%= @repo.language %></span>
                 </h3>
+            </div>
+            <div class="flex items-center justify-between">
                 <h3 class="text-sm font-medium">
-                    <strong>Watchers:</strong> <%= @repo.watchers_count %>
+                    <strong>Open Issues: </strong><%= @repo.open_issues %>
                 </h3>
             </div>
             <div class="pt-10 flex items-center justify-between">

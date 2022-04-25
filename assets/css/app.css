@@ -167,3 +167,12 @@ li.JavaScript:hover {
 li.Vue:hover {
     background-color: rgb(240 253 244);
 }
+
+div>svg {
+  float:right;
+}
+
+h3>svg {
+  float:left;
+  color: rgb(234 179 8);
+}
