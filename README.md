@@ -1,19 +1,12 @@
-# Ateliware
+# Teste Ateliware
 
-To start your Phoenix server:
+Aplicação que pesquisa repositórios no Github pelas seguintes linguagens: Elixir, Ruby, Phython, Javascript e Vue.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Para executar a aplicação, siga os passos abaixo:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  * Instale as dependências com `mix deps.get`
+  * Crie o banco de dados com `mix ecto.setup`
+  * Instale a dependências do Node.js com `cd assets && npm install`
+  * Inciei o Phoenix endpoint com `mix phx.server` ou dentro IEx com `iex -S mix phx.server`
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Agora, você pode visitar o endereço [`localhost:4000`](http://localhost:4000) pelo navegador.
